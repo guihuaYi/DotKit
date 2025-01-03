@@ -184,6 +184,18 @@ extension Dotkit where Base: UIView {
     }
     
     @discardableResult
+    public func insertSubview(_ view: UIView, belowSubview: UIView) -> Self {
+        base.insertSubview(view, belowSubview: belowSubview)
+        return self
+    }
+    
+    @discardableResult
+    public func insertSubview(_ view: UIView, aboveSubview: UIView) -> Self {
+        base.insertSubview(view, aboveSubview: aboveSubview)
+        return self
+    }
+    
+    @discardableResult
     public func cornerRadius(_ value: CGFloat) -> Self {
         base.layer.cornerRadius = value
         return self
@@ -252,6 +264,18 @@ extension Dotkit where Base: UIView {
     @discardableResult
     public func asSubviewAdd(to parentview: UIView) -> Self {
         parentview.addSubview(base)
+        return self
+    }
+    
+    @discardableResult
+    public func asSubviewInsert(to parentview: UIView, belowSubview: UIView) -> Self {
+        parentview.insertSubview(base, belowSubview: belowSubview)
+        return self
+    }
+    
+    @discardableResult
+    public func asSubviewInsert(to parentview: UIView, aboveSubview: UIView) -> Self {
+        parentview.insertSubview(base, aboveSubview: aboveSubview)
         return self
     }
 
