@@ -159,4 +159,10 @@ extension Dotkit where Base : UITextField {
         base.clearsOnInsertion = value
         return self
     }
+    
+    @discardableResult
+    public func isSecureTextEntry(_ value: Bool) -> Self {
+        base.isSecureTextEntry = value
+        return self
+    }
 }
