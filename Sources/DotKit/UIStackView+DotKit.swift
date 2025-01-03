@@ -34,6 +34,12 @@ extension Dotkit where Base: UIStackView {
     }
     
     @discardableResult
+    public func addArrangedSubviews(_ value: [UIView]) -> Self {
+        value.forEach({ base.addArrangedSubview($0) })
+        return self
+    }
+    
+    @discardableResult
     public func spacing(_ value: CGFloat) -> Self {
         base.spacing = value
         return self

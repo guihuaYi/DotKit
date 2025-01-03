@@ -106,7 +106,6 @@ extension Dotkit where Base: UILabel {
         return self
     }
     
-    
     @available(iOS 14.0, *)
     @discardableResult
     public func lineBreakStrategy(_ value: NSParagraphStyle.LineBreakStrategy) -> Self {

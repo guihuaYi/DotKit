@@ -40,6 +40,18 @@ extension Dotkit where Base : UITextField {
     }
     
     @discardableResult
+    public func keyboardType(_ value: UIKeyboardType) -> Self {
+        base.keyboardType = value
+        return self
+    }
+    
+    @discardableResult
+    public func isSecureTextEntry(_ value: Bool) -> Self {
+        base.isSecureTextEntry = value
+        return self
+    }
+    
+    @discardableResult
     public func borderStyle(_ value: UITextField.BorderStyle) -> Self {
         base.borderStyle = value
         return self
@@ -157,12 +169,6 @@ extension Dotkit where Base : UITextField {
     @discardableResult
     public func clearsOnInsertion(_ value: Bool) -> Self {
         base.clearsOnInsertion = value
-        return self
-    }
-    
-    @discardableResult
-    public func isSecureTextEntry(_ value: Bool) -> Self {
-        base.isSecureTextEntry = value
         return self
     }
 }
